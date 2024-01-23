@@ -1,0 +1,233 @@
+@import 'commun.css';
+
+.title {
+    word-break: break-word;
+}
+
+.content {
+    word-break: break-word;
+}
+
+.main {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    align-self: stretch;
+}
+
+
+/* début produit */
+.produit {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+/* boutton retour*/
+.back {
+    display: flex;
+    padding: 30px;
+}
+.backButton {
+    height: 40px;
+    width: 40px;
+    background-color: #38940E;
+    border-radius: 100px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.backButton img {
+    height: 20px;
+    width: auto;
+}
+.backButton:hover {
+    background-color: #47b913;
+}
+
+
+
+/* affichage article*/
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40%;
+    margin: 20px;
+    gap: 40px;
+}
+
+.article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 40px 0px 40px;
+    flex: 2 1 auto;
+}
+
+.article .image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+  
+.article .text {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    position: relative;
+    flex: 0 0 auto;
+}
+  
+.article .product_name {
+    width: fit-content;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+}
+  
+.article .productor_name {
+    width: fit-content;
+    font-weight: 400;
+    color: #000000;
+    font-size: 24px;
+}
+  
+.article .prix {
+    width: fit-content;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+}
+
+.description {
+    width: fit-content;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #FFE59D;
+}
+
+.avis {
+    height: 80vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.avis .top{
+    border-radius: 30px 30px 0 0;
+    background-color: #D9D9D9;
+    padding: 20px 20px 20px 20px;
+}
+.avis .reviewContainer{
+    background-color: #e7e7e7;
+    box-shadow: rgb(177, 177, 177) 0px 3px 6px 0px inset, rgba(218, 218, 218, 0.5) 0px -3px 6px 1px inset;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    
+    padding: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.review {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.review .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.review .pp img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.review .stars{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+}
+.review .stars img{
+    height: 15px;
+    width: auto;
+}
+
+.avis .bottom{
+    border-radius: 0 0 30px 30px;
+    background-color: #D9D9D9;
+    height:50px;
+    width:100%;
+}
+
+.avis .sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #cacaca;
+    border-radius: 30px;
+    padding-top: 3px;
+}
+
+.add {
+    background-color: #cacaca;
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.chiffr {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.chiffr .qte {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.chiffr .prixTotal{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.add .addToCart {
+    width:fit-content;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: #38940E;
+    color: white;
+    border: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+@media screen and (width > 520px) and (width <= 900px) {
+    .main {
+        flex-direction: column;
+        align-items: left;
+        padding: 10vh 60px !important;
+    }
+    .main .info{
+        width: auto;
+    }
+
+    .products_header {
+        flex-direction: column;
+    }
+
+    .back {
+        padding: 0px;
+    }
+}

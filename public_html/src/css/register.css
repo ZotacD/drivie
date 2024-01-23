@@ -1,0 +1,110 @@
+@import 'commun.css';
+
+@media screen and (width <= 500px) {
+  .inputSection {
+    flex-direction: column;
+  }
+}
+
+.main {
+  height: 90vh;
+  padding: 5vh 5vw 5vh 5vw;
+  display: flex;
+  justify-content: center;
+  background: #38930d;
+} 
+
+#cardTitle {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.card {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  background: white;
+  padding: 20px 50px 20px 50px;
+  align-items: center;
+  height: fit-content;
+}
+
+#cardBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-family: 'Roboto';
+  font-size: 500;
+  font-size: 0.9em;
+
+  margin: 0 10px 0 10px;
+}
+
+.inputGroup input {
+  border: 1px solid #FFBB00;
+  box-sizing: border-box;
+  background-color: #FFE59D;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+}
+
+.inputSection {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+
+#submitButton {
+  background-color: #38930d;
+  color: white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 1em;
+  font-weight: 600;
+  font-size: 'Roboto';
+}
+
+#sepBar {
+  width: 100%;
+  height: 2.5px;
+  background: #FFBB00;
+  border-radius: 10px;
+}
+
+#infos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#infos label {
+  font-family: 'Roboto';
+  font-size: 500;
+  font-size: 1em;
+  text-align: center;
+}
+
+#infos label a {
+  color: #FFBB00;
+  text-decoration: underline;
+}
+
+
+

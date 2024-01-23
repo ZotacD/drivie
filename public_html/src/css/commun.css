@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 70px auto;
+
+    overflow: hidden;
+}
+
+input, button, a {
+    font-family: 'Roboto';
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
+.main {
+    z-index: 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    overflow: auto;
+    position: relative;
+}
+
+.main::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent;
+    scroll-behavior: smooth;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    height: 7.5px;
+    background: #F5F5F5;
+    border-radius: 20px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #d4d4d4;
+  }
+
+  * {
+    font-family: 'Roboto';
+  }
+  

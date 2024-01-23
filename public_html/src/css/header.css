@@ -1,0 +1,106 @@
+@media screen and (width <= 950px) {
+    .header {
+        grid-template-columns: 100px auto 200px!important;
+    }
+}
+
+.header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
+    /* //HAUT | DROIT | BAS | GAUCHE */
+    padding: 20px 40px 20px 40px; 
+    background: #38940E;
+
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+
+    /* //calc => hauteur du header - padding haut et bas */
+    grid-template-rows: calc(10vh - 40px);
+}
+
+.header img {
+    height: 20px;
+    width: auto;
+}
+
+#main_logo {
+    height: 75px;
+    width: auto;
+}
+
+.header .start {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.header .middle {
+    grid-area: 1 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: middle;
+    align-items: center;
+}
+
+.search {
+    grid-area: 1 / 2 / 2 / 3;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+
+    /* définition de la grid pour le contenu de la barre*/
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    grid-template-areas:
+        "bar button";
+
+}
+
+/* éléments de la barre de recherche*/
+#searchbar{
+    grid-area: bar;
+    border: 2px solid white;
+    border-radius: 10px 0 0 10px;
+    padding-left: 10px; /* espace entre le côté gauche de l'input et le texte */
+}
+
+.buttonsearch {
+    grid-area: button;
+    background-color: #38940E;
+    width: 40px;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid white;
+}
+.buttonsearch:hover {
+    background-color: #47b913;
+}
+
+.buttonsearch img{
+    width: 20px;
+    height: auto;
+}
+
+.header .end {
+    grid-area: 1 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    column-gap: 20px;
+}
+
+#sep_bar {
+    width: 5px;
+    height: 50%;
+    background: white;
+    border-radius: 20px;
+}
+
+#pseudo {
+    font-family: Roboto;
+    color: white;
+}

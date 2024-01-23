@@ -1,0 +1,303 @@
+@import 'commun.css';
+
+body{
+    overflow-x: hidden;
+}
+
+h2{
+    background-color: #38940E;
+    
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 20px;
+    margin: 0;
+}
+/*
+Image Cover 
+*/
+.head_coverImage{
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.head_coverImage img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+.head_coverImage h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #FFF;
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+.head_coverImage h3 a {
+    color: #FB0;
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+/*
+Promo Produits 
+*/
+.promotions{
+    padding-top: 16px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 16px;
+}
+
+.headerProduits {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.headerProduits .titreH2Title {
+    display: flex;
+    width: 50%;
+    justify-content: left;
+}
+.headerProduits .plus{
+    display: flex;
+    width: 50%;
+    justify-content: right;
+    color: #38940E;
+    text-decoration: underline;
+}
+
+.promotions_scroll {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-top: 32px;
+}
+
+.promotions_scroll #voirprod{
+    background-color: #38940E;
+    color: white;
+    padding: 3px 10px 3px 10px;
+    border-radius: 20px;
+}
+
+.promotions_scroll img{
+    border-radius: 20px;
+   
+}
+
+.promotions h2{
+    width: 250px;
+}
+.promotions .product{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 32px;
+    margin-bottom: 16px;
+}
+.promotions .product img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+/* Nom produit */
+.promotions .product h5{
+    color: #000;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Nom Producteur */
+.promotions .product h6{
+    color: #000;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.promotions .product{
+    gap: 5px;
+}
+
+/* prix */
+.promotions .product h4{
+    color: #000;
+    font-family: Roboto;
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* nouveau prix + ancien */
+.promotions .product span {
+    display: flex;
+}
+
+/*
+Meilleurs Producteurs 
+*/
+.best_productors{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.best_productors h2{
+    width: 350px;
+}
+.best_productors_scroll{
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.best_productors #voirprod{
+    background-color: #38940E;
+    color: white;
+    border-radius: 20px;
+    padding: 3px 10px 3px 10px;
+}
+
+.productor{
+    border-radius: 13px;
+    background: #EBEBEB;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 16px;
+    margin-right: 32px;
+    margin-bottom: 8px;
+}
+.productor_info{
+    text-align: center;
+    margin-right: 32px;
+    width: 200px;
+}
+/* Nom Producteur */
+.productor_info h5{
+    color: #000;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+/* Type Producteur + Nb Ventes */
+.productor_info h6{
+    color: #000;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.productor_img img{
+    object-fit: cover;
+    object-position: center;
+    width: 132px;
+    height: 100px;
+}
+
+
+/* 
+        Map
+ */
+
+#map{
+    width: 80vw;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+* Steps
+*/
+.howTo_steps{
+    padding-bottom: 32px;
+}
+.howTo_steps h3{
+    text-align: center; 
+    color: #000;
+
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;  
+    
+}
+.steps{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+.step{
+    text-align: center;
+}
+.step h4{
+    color: #000;
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.step h6{
+    border: 2px #38940E solid;
+    border-radius: 100%;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    color: #38940E;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: auto;
+    margin-right: auto;
+}

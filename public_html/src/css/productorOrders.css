@@ -1,0 +1,199 @@
+
+@import 'commun.css';
+
+.main {
+    padding: 5vh 5vw 0 5vw;
+    display: flex;
+    justify-content: center;
+} 
+
+.back {
+    display: flex;
+    align-items: center;
+    background-color: #38940E;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+}
+.back img {
+    height: 25px;
+    padding-left: 10px;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+}
+
+.topLeft, .topRight {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.barLeftPart, .barRightPart {
+    width: 6px;
+    height: 100%;
+    background-color: #38940E;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.leftContent, .rightContent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: fit-content;
+}
+
+.commandesPrep, .commandesRecup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titreCommande {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    font-size: 24;
+}
+
+.titreCommande #nbCommande {
+    width: 50%;
+    text-align: left;
+}
+
+.titreCommande #dateCommande {
+    width: 50%;
+    text-align: right;
+    color: #909090;
+}
+
+.commande {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    gap: 15px;
+}
+
+.listArticles, .recap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.fiche {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.fiche img{
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+    margin: 15px;
+    border-radius: 15px
+}
+
+#nom_produit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#qte {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    padding: 10px;
+    width: 86px;
+    background-color: #38940E;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+#prixTotProd {
+    width: 70px;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: 20;
+}
+
+.sep {
+    width: 90%;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #bcbcbc;
+}
+
+.prixTotalCommande {
+    margin: 5px;
+    font-weight: 800;
+    font-size: 26;
+}
+
+.bouttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#accepterCommande, #refuserCommande {
+    height: 60px;
+    width: 60px;
+    background-color: #ebebeb;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    cursor: pointer;
+}
+
+.commandeRecap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.commandeRecap img{
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+    margin: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    gap: 15px;
+}
+
+@media screen and (width <= 900px) {
+
+    .main {
+        flex-wrap: wrap;
+    }
+
+    .fiche {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,116 @@
+
+@import 'commun.css';
+
+.main {
+    padding: 30px 30px 0 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    height: 40px;
+    width: 150px;
+    border-radius: 15px;
+    border: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 0px 20px;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.item img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+    filter: invert(99%) sepia(1%) saturate(1678%) hue-rotate(186deg) brightness(115%) contrast(100%);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.bar {
+    height: auto;
+    width: 6px;
+    background-color: #38940E;
+    border-radius: 20px;
+}
+
+.list {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: calc(100% - 30px);
+  }
+  
+  td {
+    border: solid 1px #000;
+    border-style: none solid solid none;
+    padding: 10px;
+    word-wrap: break-word;
+
+    font-family: Roboto;
+  }
+  
+  tr:first-child td:first-child { border-top-left-radius: 10px; }
+  tr:first-child td:last-child { border-top-right-radius: 10px; }
+  
+  tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+  tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+  
+  tr:first-child td { border-top-style: solid; }
+  tr td:first-child { border-left-style: solid; }
+
+
+
+#sep {
+    height: 20px;
+    width: 1px;
+    background-color: #797979;
+}
+
+.productor_buttons {
+    border: 0;
+}
+
+.productor_buttons img {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+
+@media screen and (max-width : 860px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .filter {
+        flex-direction: row;
+    }
+}

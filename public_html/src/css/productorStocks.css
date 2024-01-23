@@ -1,0 +1,99 @@
+@import 'commun.css';
+
+.main {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "head head"
+        "categ categ"
+        "left main";
+    min-height: 100vh;
+}
+    
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.card {
+    width: 280px;
+    height: 200px;
+    background-color: lightgreen;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.name {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity {
+    color: black;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.price {
+    color: black;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.button {
+    width: 280px;
+    height: 200px;
+    border-color: #38930d;
+    color: black;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button2 {
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    margin-right: 20px;
+}

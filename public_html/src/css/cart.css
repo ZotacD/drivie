@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'commun.css';
+@media screen and (width <= 520px) {
+    .main {
+        flex-direction: column;
+        padding: 10vh 20px !important;
+    }
+
+    .products_header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (width > 520px) and (width <= 900px) {
+    .main {
+        flex-direction: column;
+        padding: 10vh 60px !important;
+    }
+
+    .products_header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (width > 820px) and (width <= 1200px) {
+    .main {
+        padding: 10vh 100px !important;
+    }
+}
+
+
+.main {
+    display: flex;
+
+    padding: 10vh 20vw;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    align-self: stretch; 
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.title {
+    word-break: break-word;
+
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
+
+.content {
+    word-break: break-word;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal; 
+}
+
+.rounded_green_button {
+    display: flex;
+    padding: 10px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    background: #38940E; 
+}
+
+.products_col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    align-self: stretch; 
+}
+
+.products_header {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch; 
+
+    border-radius: 20px;
+    background: #EBEBEB; 
+}
+
+.product {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-self: stretch; 
+    justify-content: space-between;
+
+    border-radius: 20px;
+    background: #EBEBEB; 
+}
+
+.product .start {
+    max-height: 100px;
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.product .start .img {
+    height: 100px;
+    width: auto;
+}
+
+.product .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    align-self: stretch; 
+}
+
+.product .middle .title {
+    font-size: 20px;
+}
+
+.product .end {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+
+    align-self: stretch; 
+}
+
+.product .end .cross {
+    height: 20px;  
+    width: auto;
+    filter: brightness(0) saturate(100%)
+}
+
+.product .end .price {
+    text-align: right;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
+
+.total_col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    align-self: stretch; 
+}
+
+.total_header {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch; 
+
+    border-radius: 20px;
+    background: #EBEBEB; 
+}
+
+.total {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    align-items: center;
+    align-self: stretch; 
+
+    border-radius: 20px;
+    background: #EBEBEB; 
+}
+
+.total .infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch; 
+}
+
+.total .infos .content {
+    font-size: 30px;
+}
+
+.total .infos .img {
+    height: 25px;
+    width: auto;
+    filter: brightness(0) saturate(100%)
+}
+
+.total .rounded_green_button .content {
+    color: white;
+}
+
+#green_sep_bar {
+    width: 30%;
+    height: 5px;
+    background: #38940E;
+    border-radius: 20px;
+}
+
+.empty_cart_col {
+    display: flex;
+    gap: 40px;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.empty_cart_col .img {
+    height: 75px;
+    width: auto;
+    filter: brightness(0) saturate(100%)
+}
+
+.empty_cart_col .rounded_green_button {
+    width: 25%;
+}
+
+.empty_cart_col .rounded_green_button .content {
+    color: white;
+}

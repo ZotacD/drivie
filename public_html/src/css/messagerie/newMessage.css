@@ -1,0 +1,95 @@
+@import '../commun.css';
+
+@media screen and (width < 700px) {
+    .main {flex-direction: column;}
+}
+
+.main {
+    padding: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    gap: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #38930d;
+    border-radius: 20px;
+  }
+  
+  #sendButton {
+    background-color: #38930d;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+  }
+
+  #sendButton:hover {
+    background-color: #2b6b09;
+  }
+
+  input:disabled, textarea:disabled {
+    background: rgb(192, 192, 192);
+  }
+
+  .receiversSection {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+
+    box-sizing: border-box;
+    border: 2px solid #38930d;
+    border-radius: 20px;
+
+    flex-wrap: wrap;
+  }
+
+  .receiversSection input {
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    border: 0;
+width: fit-content;
+  }
+
+  .groups {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+    width: fit-content;
+    flex-basis: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .group {
+    background: #38930d;
+    color: white;
+    padding: 5px;
+    height: 100%;
+    border-radius: 20px;
+    width: fit-content;
+    white-space: nowrap;
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .deleteButton {
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    font-weight: 700;
+  }

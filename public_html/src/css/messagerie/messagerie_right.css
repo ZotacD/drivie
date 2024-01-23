@@ -1,0 +1,67 @@
+
+.message_body_right{
+    /* background-color: red; */
+    width: 60vw;
+    height: 100%;
+    height: calc(100vh - 160px);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.message_body_right .messageHead{
+    display: grid;
+    grid-template-columns: 64px repeat(2, 1fr);
+    grid-template-rows: repeat(2, 32px) 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    padding: 16px;
+}
+
+.message_body_right .messageHead .senderPicture{
+    grid-area: 1 / 1 / 3 / 2;
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    object-position: center;
+}
+.message_body_right .messageHead .senderMail{
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0;
+    margin-left: 16px;
+    padding: 4px 0;
+}
+.message_body_right .messageHead .messageSubject{
+    grid-area: 2 / 2 / 3 / 3;
+    margin: 0;
+    margin-left: 16px;
+}
+.message_body_right .messageHead .messageDate{
+    grid-area: 1 / 3 / 2 / 4;
+    margin: 0;
+    margin-left: 70%;
+}
+.message_body_right .messageHead .sendedMail{
+    grid-area: 3 / 2 / 4 / 3;
+    margin: 0;
+    margin-left: 16px;
+}
+.message_body_right .messageHead .messageActions{
+    grid-area: 3 / 3 / 4 / 4;
+    margin-left: 70%;
+}
+.message_body_right .messageHead .messageActions button{
+    background-color: transparent;
+    border: 0;
+}
+
+.message_body_right .messageContent{
+    color: #000;
+    font-family: Roboto;
+    height: 65vh;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    overflow-y: auto;
+    padding: 8px 100px;
+}

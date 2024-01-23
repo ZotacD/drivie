@@ -1,0 +1,103 @@
+
+#leftBar {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    min-width: 240px;
+}
+
+#newMessage {
+    /* padding: 20px; */
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    background: #38940E;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: calc(100% - 40px);
+
+    margin-top: 30px;
+}
+
+#newMessage img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+#newMessage span {
+    color: white;
+    font-size: 1em;
+}
+
+#leftButtons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+}
+
+.leftButton {
+    padding: 10px 20px 10px 20px;
+    border: 1px gray solid;
+    background: rgb(250, 250, 250);
+    width: calc(100% - 40px);
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    gap: 10px;
+}
+
+.leftButton:first-of-type {
+    border-radius: 20px 20px 0 0;
+}
+
+.leftButton:last-of-type {
+    border-radius: 0 0 20px 20px;
+}
+
+.leftButton img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+.leftButton span {
+    color: black;
+    font-size: 1em;
+}
+
+.leftButton:hover {
+    background: rgb(190, 190, 190);
+}
+
+.focus {
+    background: rgb(210, 210, 210);
+}
+
+#pageTitle {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

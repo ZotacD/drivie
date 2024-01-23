@@ -1,0 +1,161 @@
+@import '../commun.css';
+
+.main {
+    padding: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    gap: 20px;
+}
+
+#searchBar {
+    background: rgb(224, 224, 224);
+    padding: 10px;
+    border-radius: 20px;
+    width: calc(100% - 20px);
+}
+
+#messageMiddle {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    width: 100%;
+}
+
+#searchForm {
+    width: 100%;
+}
+
+#messagesScroll {
+    width: 100%;
+    height: 100%;
+}
+
+#messages {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+}
+
+.message {
+    width: calc(100% - 40px);
+    padding: 20px;
+    background: #38940E;
+    border-radius: 20px;
+    min-width: 280px;
+}
+
+.message button {
+    font-size: initial;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: none;
+    border: 0;
+
+    color: white;
+}
+
+.messageImg {
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+}
+
+.messageInfo {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.messageDate {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.focus, .focus button {
+    color: black;
+    background: rgb(236, 236, 236)!important;
+}
+
+.focus button .messageImg {
+    filter: brightness(0);
+}
+
+.focus {
+    border: 1px black solid;
+}
+
+#messageEnd {
+    margin-top: 65px;
+    padding: 20px;
+    background: rgb(236, 236, 236);
+    height: 100%;
+    min-width: 500px;
+    width: calc(100%-40px);
+    border-radius: 20px;
+}
+
+.messageHead {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.messageHead .messageDate {
+    color: #696969;
+}
+
+.separation {
+    height: 2px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #696969;
+    margin-block: 5px;
+}
+
+@media screen and (width < 1200px) and (width > 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    #messagesScroll {
+        overflow: hidden;
+    }
+
+    #messages {
+        flex-direction: row;
+        overflow: scroll;
+    }
+
+    #messageEnd {
+        margin: 0;
+    }
+}
+
+@media screen and (width < 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    #messagesScroll {
+        overflow: hidden;
+    }
+
+    #messages {
+        flex-direction: row;
+        overflow: scroll;
+    }
+
+    #messageEnd {
+        margin: 0;
+        min-width:auto;
+        width: calc(100%-40px);
+    }
+}
