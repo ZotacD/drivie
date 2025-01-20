@@ -1,6 +1,6 @@
 -- CREATION DONNEES
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 
 DROP TABLE IF EXISTS MEMBRE;
 DROP TABLE IF EXISTS DESTINATAIRE;
@@ -220,7 +220,7 @@ CREATE TABLE MEMBRE(
 
 -- PROCEDURES
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 
 DROP PROCEDURE IF EXISTS SuppArtiPanier;
 DROP PROCEDURE IF EXISTS SuppClient;
@@ -285,7 +285,7 @@ BEGIN
     num_siret,
     description_util,
     id_type,
-    "src/img/base_user_image.png"
+    "public/img/base_user_image.png"
   );
 
   SET id_inserted_util = LAST_INSERT_ID();
@@ -446,7 +446,7 @@ END $$
 
 DELIMITER ;
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 DROP PROCEDURE IF EXISTS validerPanier;
 
 DELIMITER $$
@@ -727,16 +727,16 @@ VALUES
 
 -- INSERT INTO PRODUIT (nom_prod, description_prod, url_image_prod, date_prod, est_bio, id_categorie, id_util, pu_prod, id_unite)
 -- VALUES
--- ('Pommes', 'Pommes fraîches du verger local.', 'src/img/base_product_image.png', '2023-10-23 08:00:00', 1, 1, 2, 2.99, 1),
--- ('Carottes', 'Carottes biologiques cultivées localement.', 'src/img/base_product_image.png', '2023-10-23 09:15:00', 1, 2, 2, 2.99, 2),
--- ('Lait frais', 'Lait frais de la ferme voisine.', 'src/img/base_product_image.png', '2023-10-23 10:30:00', 1, 3, 2, 2.99, 3),
--- ('Poulet fermier', 'Poulet élevé en plein air, sans antibiotiques.', 'src/img/base_product_image.png', '2023-10-23 11:45:00', 1, 4, 4, 2.99, 4),
--- ('Saumon sauvage', 'Saumon frais pêché dans les eaux locales.', 'src/img/base_product_image.png', '2023-10-23 13:00:00', 1, 5, 6, 2.99, 5),
--- ('Pain artisanal', 'Pain fraîchement cuit au four artisanal.', 'src/img/base_product_image.png', '2023-10-23 14:15:00', 0, 6, 6, 2.99, 6),
--- ('Chocolat noir', 'Chocolat noir biologique fait à la main.', 'src/img/base_product_image.png', '2023-10-23 15:30:00', 1, 7, 8, 2.99, 7),
--- ('Jus d orange frais', 'Jus d orange fraîchement pressé.', 'src/img/base_product_image.png', '2023-10-23 16:45:00', 1, 8, 8, 2.99, 8),
--- ('Légumes bio', 'Panier de légumes biologiques variés.', 'src/img/base_product_image.png', '2023-10-23 18:00:00', 1, 2, 10, 2.99, 9),
--- ('Produit spécial', 'Produit spécial en édition limitée.', 'src/img/base_product_image.png', '2023-10-23 19:15:00', 0, 10, 10, 2.99, 10);
+-- ('Pommes', 'Pommes fraîches du verger local.', 'public/img/base_product_image.png', '2023-10-23 08:00:00', 1, 1, 2, 2.99, 1),
+-- ('Carottes', 'Carottes biologiques cultivées localement.', 'public/img/base_product_image.png', '2023-10-23 09:15:00', 1, 2, 2, 2.99, 2),
+-- ('Lait frais', 'Lait frais de la ferme voisine.', 'public/img/base_product_image.png', '2023-10-23 10:30:00', 1, 3, 2, 2.99, 3),
+-- ('Poulet fermier', 'Poulet élevé en plein air, sans antibiotiques.', 'public/img/base_product_image.png', '2023-10-23 11:45:00', 1, 4, 4, 2.99, 4),
+-- ('Saumon sauvage', 'Saumon frais pêché dans les eaux locales.', 'public/img/base_product_image.png', '2023-10-23 13:00:00', 1, 5, 6, 2.99, 5),
+-- ('Pain artisanal', 'Pain fraîchement cuit au four artisanal.', 'public/img/base_product_image.png', '2023-10-23 14:15:00', 0, 6, 6, 2.99, 6),
+-- ('Chocolat noir', 'Chocolat noir biologique fait à la main.', 'public/img/base_product_image.png', '2023-10-23 15:30:00', 1, 7, 8, 2.99, 7),
+-- ('Jus d orange frais', 'Jus d orange fraîchement pressé.', 'public/img/base_product_image.png', '2023-10-23 16:45:00', 1, 8, 8, 2.99, 8),
+-- ('Légumes bio', 'Panier de légumes biologiques variés.', 'public/img/base_product_image.png', '2023-10-23 18:00:00', 1, 2, 10, 2.99, 9),
+-- ('Produit spécial', 'Produit spécial en édition limitée.', 'public/img/base_product_image.png', '2023-10-23 19:15:00', 0, 10, 10, 2.99, 10);
 -- PRODUIT --
 
 -- MESSAGE --
@@ -899,7 +899,7 @@ PRODUIT.est_bio,
 UNITE.nom_unite
 HAVING SUM(STOCK.qt_stock) > 0;
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 
 
 
@@ -946,7 +946,7 @@ INNER JOIN PRODUIT ON PRODUIT.id_prod= ARTICLE.id_prod
 INNER JOIN UNITE ON UNITE.id_unite=PRODUIT.id_unite
 INNER JOIN UTILISATEUR ON UTILISATEUR.id_util=PRODUIT.id_util WHERE COMMANDE.id_util=PRODUIT.id_util;
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 DROP VIEW IF EXISTS infosProduits;
 CREATE VIEW infosProduits AS SELECT PRODUIT.id_prod, PRODUIT.id_util, pseudo_util, nom_prod, description_prod, url_image_prod, date_prod, est_bio, nom_categorie, pu_prod, nom_unite, PRODUIT.id_unite, SUM(qt_stock) AS 'qt_stock', PRODUIT.id_categorie
 FROM PRODUIT 
@@ -959,14 +959,14 @@ GROUP BY id_prod;
 
 
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 DROP VIEW IF EXISTS infosMessages;
 CREATE VIEW infosMessages AS SELECT G1.nom_groupe AS 'nom_groupe_exp', MESSAGE.id_mess, MESSAGE.objet_mess, MESSAGE.contenu_mess, MESSAGE.date_mess, MESSAGE.exp_groupe_mess, DESTINATAIRE.dest_groupe_mess, DESTINATAIRE.ordre_groupe_dest, G2.nom_groupe AS 'nom_groupe_dest' FROM GROUPE AS G1
 INNER JOIN MESSAGE ON G1.id_groupe=MESSAGE.exp_groupe_mess
 INNER JOIN DESTINATAIRE ON MESSAGE.id_mess=DESTINATAIRE.id_mess
 INNER JOIN GROUPE AS G2 ON DESTINATAIRE.dest_groupe_mess=G2.id_groupe;
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 DROP VIEW IF EXISTS infosAvis;
 CREATE VIEW infosAvis AS SELECT UTILISATEUR.url_image_util, UTILISATEUR.prenom_util, UTILISATEUR.nom_util, note_avis, date_avis, date_prod, titre_avis, description_avis, AVIS.id_prod
 FROM AVIS 
@@ -993,14 +993,14 @@ INNER JOIN UTILISATEUR ON AVIS.id_util=UTILISATEUR.id_util;
 
 
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 -- SELECT COUNT(*) FROM (SELECT PRODUIT.id_prod FROM PRODUIT LEFT JOIN STOCK ON PRODUIT.id_prod = STOCK.id_prod WHERE PRODUIT.id_util = 16 GROUP BY PRODUIT.id_prod HAVING SUM(STOCK.qt_stock) = 0 OR SUM(STOCK.qt_stock) IS NULL) AS produits_rupture;
 
 
 
 
 
-USE drivie_inf2pj_07;
+USE but2drivie_main;
 
 DROP PROCEDURE IF EXISTS nbProduitsRupture;
 DELIMITER $$
